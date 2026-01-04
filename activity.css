@@ -1,0 +1,116 @@
+.act-title {
+    text-align: center;
+    margin: 60px 0 40px;
+}
+
+.act-title h2 {
+    color: var(--primary-red);
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.act-title p {
+    color: #777;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.act-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 35px;
+    margin-bottom: 80px;
+}
+
+.act-item {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f0f0f0;
+}
+
+.act-item:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.act-image-box {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.act-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.act-item:hover .act-image-box img {
+    transform: scale(1.15);
+}
+
+.act-info {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.act-info h3 {
+    font-size: 1.4rem;
+    color: var(--primary-red);
+    margin-bottom: 15px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.act-info p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 25px;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.act-info a {
+    text-decoration: none;
+    color: #ffffff;
+    background: var(--accent-orange);
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    align-self: flex-start;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.2);
+}
+
+.act-info a:hover {
+    background: var(--primary-red);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(139, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .act-title h2 {
+        font-size: 2.2rem;
+    }
+    .act-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .act-image-box {
+        height: 200px;
+    }
+}
